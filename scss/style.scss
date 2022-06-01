@@ -1,0 +1,9 @@
+$color: rgb(0, 94, 255);
+
+.test {
+	color: $color;
+	border: 1px solid $color;
+	background-color: red;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
