@@ -1,0 +1,28 @@
+// Background & Color Text 
+@mixin gen-props($prefix, $property) {
+
+  @each $color-name,
+  $color in $colors {
+    .#{$prefix}-#{$color-name} {
+      #{$property}: $color
+    }
+  }
+}
+
+// animation
+@mixin keyframes ($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Centred With Flex
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

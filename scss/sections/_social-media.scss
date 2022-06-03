@@ -1,0 +1,15 @@
+.social-media {
+  a {
+    transition: all 0.3s ease;
+
+    &:hover {
+
+      @each $media,
+      $color in $color-media {
+        .#{$media} {
+          color: $color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+// Colors
+$purple-dark: #2b3445;
+$carrot-red: #e84748;
+$purple-dark-20 : shade-color($purple-dark, 20%);
+$dark-transparent : rgba(0, 0, 0, 0.2);
+$review-cold: #ffc107;
+$html-color: #dd4b25;
+$css-color: #0b6fb4;
+$js-color: #f6d137;
+$bs-color: #8311f6;
+$sass-color: #c76494;
+$ts-color: #2f74c0;
+$http: #498cc4;
+$angular-color: #af2b2d;
+$vue-color: #41b883;
+$react-color: #61dafb;
+$mongoDB-color: #13aa52;
+$nodeJS-color: #3f863e;
+$npm-color: #c92a29;
+
+// Map Of Colors
+$colors: (purple-dark: $purple-dark,
+  carrot-red: $carrot-red,
+  purple-dark-20:$purple-dark-20,
+  dark-transparent :$dark-transparent,
+  review-cold : $review-cold,
+  html : $html-color,
+  css:$css-color,
+  js : $js-color,
+  bs : $bs-color,
+  sass :$sass-color,
+  ts:$ts-color,
+  http:$http,
+  angular : $angular-color,
+  vue:$vue-color,
+  react:$react-color,
+  mongoDB:$mongoDB-color,
+  nodeJS:$nodeJS-color,
+  npm:$npm-color);
+
+$color-media :(facebook: #1877f2,
+  youtube: #ff0000,
+  instagram : #c13584,
+  twitter:#1da1f2)

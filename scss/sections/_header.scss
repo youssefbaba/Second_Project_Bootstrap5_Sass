@@ -1,0 +1,16 @@
+/* Header Section */
+.header {
+  .badge {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custome-z-index {
+    z-index: 1040;
+    min-width: 9rem;
+  }
+
+  input[type="number"] {
+    width: calc(100% / 3) !important;
+  }
+}

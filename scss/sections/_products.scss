@@ -1,0 +1,74 @@
+/* Section Products */
+.products {
+  .card {
+    &:hover {
+      img {
+        opacity: 0.5;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  .offcanvas {
+    width: 100vh;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .offcanvas {
+      width: 80vw;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .offcanvas {
+      width: 70vw;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .offcanvas {
+      width: 35vw;
+    }
+  }
+
+  .icon-cart {
+    cursor: pointer;
+  }
+
+  .btn-danger {
+    &:hover {
+      @extend .btn-success;
+    }
+
+    &:active {
+      +.icon-cart {
+        color: $success !important;
+      }
+
+    }
+  }
+
+  .accordion-button {
+    padding: 1.25rem;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .accordion-button:focus,
+  .accordion-button:hover,
+  .accordion-button:not(.collapsed) {
+    background-color: #eee;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: black;
+  }
+
+  .accordion-button::after {
+    display: none;
+  }
+
+
+}

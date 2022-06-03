@@ -1,0 +1,40 @@
+/* Categories Section */
+.categories {
+  .card {
+    width: 350px;
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: $light;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+    animation: flashShadow 3s ease infinite;
+
+    &:hover {
+      cursor: pointer;
+      filter: grayscale(0);
+      background-color: $white;
+      @extend .shadow;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .card {
+      width: 400px;
+    }
+  }
+}
+
+@include keyframes(flashShadow) {
+
+  from {
+    box-shadow: none;
+  }
+
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  to {
+    box-shadow: none;
+  }
+}

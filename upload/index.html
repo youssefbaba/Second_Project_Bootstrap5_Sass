@@ -1,132 +1,2595 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Second Project Bootstrap 5 Sass</title>
-		<!-- Font Awesome  Css -->
-		<link rel="stylesheet" href="css/awesome.css" />
-		<!-- Style Css -->
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
-	<body>
-		<div class="container">
-			<div class="accordion" id="accordionExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingOne">
-						<button
-							class="accordion-button"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#collapseOne"
-							aria-expanded="true"
-							aria-controls="collapseOne"
-						>
-							Accordion Item #1
-						</button>
-					</h2>
-					<div
-						id="collapseOne"
-						class="accordion-collapse collapse show"
-						aria-labelledby="headingOne"
-						data-bs-parent="#accordionExample"
-					>
-						<div class="accordion-body">
-							<strong
-								>This is the first item's accordion
-								body.</strong
-							>
-							It is shown by default, until the collapse plugin
-							adds the appropriate classes that we use to style
-							each element. These classes control the overall
-							appearance, as well as the showing and hiding via
-							CSS transitions. You can modify any of this with
-							custom CSS or overriding our default variables. It's
-							also worth noting that just about any HTML can go
-							within the <code>.accordion-body</code>, though the
-							transition does limit overflow.
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Second Project Bootstrap 5 Sass</title>
+	<!-- Font Awesome  Css -->
+	<link rel="stylesheet" href="css/awesome.css" />
+	<!-- Style Css -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- Start Main Section  -->
+	<main>
+		<!-- Start Section Header -->
+		<header class="header">
+			<!-- Start Top Info Top  -->
+			<div class="container-fluid text-light py-3 bg-purple-dark-20">
+				<div class="row text-wrap align-items-center">
+					<!-- Start Support -->
+					<div class="col-md-4 col-xxl-3 d-flex flex-row ">
+						<i class="fa-solid fa-headset text-carrot-red pe-1"></i>
+						<span class="text-muted me-1">Support</span>
+						<a href="tel:00331254566151" class="text-muted hover-link text-decoration-none">(00)331254566151</a>
+					</div>
+					<!-- End Support -->
+					<!-- Start Info Carousel -->
+					<div class="col-md-6 col-xxl-6 carousel slide " data-bs-ride="carousel" id="info-top-carousel">
+						<div class="carousel-inner text-carrot-red">
+							<div class="carousel-item active">
+								<span>
+									Get instant and lifetime access to you
+									course!
+								</span>
+							</div>
+							<div class="carousel-item">
+								<span>Money back within 30 days.</span>
+							</div>
+							<div class="carousel-item">
+								<span>Friendly 24/7 customer support.</span>
+							</div>
+							<div class="carousel-item">
+								<span>We possess SSL / Secure
+									сertificate</span>
+							</div>
 						</div>
 					</div>
+					<!-- End Info Carousel -->
+					<!-- Start  Language & Currency & Cartshop  -->
+					<div class="col-md-2 col-xxl-3 d-flex justify-content-end align-items-center">
+						<!-- Start  Language & Currency    -->
+						<div class="btn-group dropdown">
+							<button class="btn btn-sm dropdown-toggle px-2 text-light" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<i class="fa-solid fa-flag me-2"></i> Eng / $
+							</button>
+							<ul class="dropdown-menu my-1 custome-z-index start-0">
+								<li class="dropdown-item">
+									<select class="form-select form-select-sm">
+										<option value="usd">$ USD</option>
+										<option value="eur">€ EUR</option>
+										<option value="ukp">£ UKP</option>
+										<option value="jpy">¥ JPY</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<!-- End  Language & Currency  -->
+						<!-- Start Cartshop & Canvas -->
+						<!--  Start Cartshop -->
+						<a class="position-relative d-inline-block me-1" data-bs-toggle="offcanvas" href="#offcanvasCart"
+							aria-controls="offcanvasCart">
+							<i class="fa-solid fa-cart-shopping bg-light text-dark p-2 rounded-circle"></i>
+							<span
+								class="badge position-absolute top-0 start-100 translate-middle rounded-pill bg-danger d-flex align-items-center justify-content-center">+2</span>
+						</a>
+						<!--  Start Cartshop -->
+						<!-- Start Cart Content  -->
+						<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasLabel">
+							<!--  Start Header Canvas  -->
+							<div class="offcanvas-header bg-purple-dark">
+								<h5 class="offcanvas-title text-light" id="offcanvasLabel">
+									Card
+								</h5>
+								<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+									aria-label="Close"></button>
+							</div>
+							<!--  End Header Canvas  -->
+							<!-- Start Body Canvas -->
+							<div class="offcanvas-body">
+								<!-- Start Checkout   -->
+								<div class="row mb-5">
+									<div class="col mb-3">
+										<div class="d-flex mb-3 text-purple-dark justify-content-between">
+											<h5>Subtotal</h5>
+											<h5>$ 41.98</h5>
+										</div>
+										<form>
+											<div class="d-flex justify-content-between">
+												<input type="text" class="form-control w-auto" placeholder="Promo code " required />
+												<button type="submit" class="btn btn-outline-danger">
+													Apply code
+												</button>
+											</div>
+										</form>
+									</div>
+									<button class="btn btn-danger m-auto shadow w-100">
+										<i class="fa-solid fa-credit-card me-2">
+										</i>
+										Proceed to checkout
+									</button>
+								</div>
+								<!-- End Checkout   -->
+								<!-- Start Cart Items -->
+								<div class="row">
+									<!-- Start Cart Item 1 -->
+									<div class="card border-0 mb-3">
+										<div class="row g-0">
+											<div class="col-md-4">
+												<img src="imgs/30 Day of Projects Logo-V3.jpg" alt="image_item1"
+													class="img-fluid rounded-start" />
+											</div>
+											<div class="col-md-8">
+												<div class="card-body text-purple-dark pt-sm-0">
+													<h6 class="card-title">
+														30 HTML5 CSS3 &
+														JavaScript Projects
+													</h6>
+													<div class="row align-items-center">
+														<p class="col-4 text-primary mb-0">
+															$15.99
+														</p>
+														<input class="col-4 h-50 form-control" type="number" placeholder="1" min="0" />
+														<a href="#" class="col-4 text-danger d-flex justify-content-end" data-bs-toggle="tooltip"
+															title="Remove">
+															<i class="fa-regular fa-circle-xmark "></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- End Cart Item 1 -->
+									<!-- Start Cart Item 2 -->
+									<div class="card border-0 mb-3">
+										<div class="row g-0">
+											<div class="col-md-4">
+												<img src="imgs/Modern JavaScript and NodeJS Course.jpg" alt="image_item2"
+													class="img-fluid rounded-start" />
+											</div>
+											<div class="col-md-8">
+												<div class="card-body text-purple-dark pt-sm-0">
+													<h6 class="card-title">
+														Modern JavaScript and NodeJS Course
+													</h6>
+													<div class="row align-items-center">
+														<p class="col-4 text-primary mb-0">
+															$25.99
+														</p>
+														<input class="col-4 h-50 form-control" type="number" placeholder="1" min="0" />
+														<a href="#" class="col-4 text-danger d-flex justify-content-end" data-bs-toggle="tooltip"
+															title="Remove">
+															<i class="fa-regular fa-circle-xmark"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- End Cart Item 2 -->
+								</div>
+
+								<!-- End Cart Items -->
+							</div>
+							<!-- End Body Canvas -->
+						</div>
+						<!-- End Cart Content  -->
+						<!-- End Cartshop & Canvas  -->
+					</div>
+					<!-- End Language & Currency & Cartshop  -->
 				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#collapseTwo"
-							aria-expanded="false"
-							aria-controls="collapseTwo"
-						>
-							Accordion Item #2
-						</button>
-					</h2>
-					<div
-						id="collapseTwo"
-						class="accordion-collapse collapse"
-						aria-labelledby="headingTwo"
-						data-bs-parent="#accordionExample"
-					>
-						<div class="accordion-body">
-							<strong
-								>This is the second item's accordion
-								body.</strong
-							>
-							It is hidden by default, until the collapse plugin
-							adds the appropriate classes that we use to style
-							each element. These classes control the overall
-							appearance, as well as the showing and hiding via
-							CSS transitions. You can modify any of this with
-							custom CSS or overriding our default variables. It's
-							also worth noting that just about any HTML can go
-							within the <code>.accordion-body</code>, though the
-							transition does limit overflow.
+			</div>
+			<!-- End Top Info Top  -->
+		</header>
+		<!-- End Section Header -->
+		<!-- Start Navbar  -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-purple-dark sticky-top">
+			<div class="container-fluid">
+				<a class="navbar-brand d-flex align-items-center" href="#">
+					<img src="imgs/ecommerce.png" alt="logo_image">
+					<span class="text-light align-middle">eCommerce</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navigation">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCourse" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Course
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownCourse">
+								<li><a class="dropdown-item" href="#product-gallery">Front End</a></li>
+								<li><a class="dropdown-item" href="#product-gallery">Back End</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#product-gallery">Full Stack</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#collaborate">Collaborate</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- End Navbar  -->
+		<!-- Start Carousel  -->
+		<section class="carousel-landing">
+			<div class="container">
+				<div id="carouselCaptions" class="carousel slide shadow" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+							aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="imgs/pexels-andrea-piacquadio-3775128.jpg" class="d-block w-100" alt="image_slide_01">
+							<div class="carousel-caption d-none d-md-block fade-in-left bg-dark-transparent mb-5">
+								<h5 class="display-4">Learn from everywhere</h5>
+								<p>Some representative placeholder content for the first slide.</p>
+								<a href="#product-gallery" class="btn btn-danger btn-lg text-light">
+									<span>Courses</span>
+									<i class="fa-solid fa-caret-right fa-lg text-light ms-3 shadow"></i>
+								</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="imgs/pexels-andrea-piacquadio-3775168.jpg" class="d-block w-100" alt="image_slide_02">
+							<div class="carousel-caption d-none d-md-block fade-in-left bg-dark-transparent mb-5">
+								<h5 class="display-4">Mobil access</h5>
+								<p>Some representative placeholder content for the second slide.</p>
+								<a href="#product-gallery" class="btn btn-danger btn-lg text-light">
+									<span>Courses</span>
+									<i class="fa-solid fa-caret-right fa-lg text-light ms-3 shadow"></i>
+								</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="imgs/pexels-mentatdgt-1569076.jpg" class="d-block w-100" alt="image_slide_03">
+							<div class="carousel-caption d-none d-md-block fade-in-left bg-dark-transparent mb-5">
+								<h5 class="display-4">Lifetime access</h5>
+								<p>Some representative placeholder content for the third slide.</p>
+								<a href="#product-gallery" class="btn btn-danger btn-lg text-light">
+									<span>Courses</span>
+									<i class="fa-solid fa-caret-right fa-lg text-light ms-3"></i>
+								</a>
+							</div>
 						</div>
 					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
 				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingThree">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#collapseThree"
-							aria-expanded="false"
-							aria-controls="collapseThree"
-						>
-							Accordion Item #3
-						</button>
-					</h2>
-					<div
-						id="collapseThree"
-						class="accordion-collapse collapse"
-						aria-labelledby="headingThree"
-						data-bs-parent="#accordionExample"
-					>
-						<div class="accordion-body">
-							<strong
-								>This is the third item's accordion
-								body.</strong
-							>
-							It is hidden by default, until the collapse plugin
-							adds the appropriate classes that we use to style
-							each element. These classes control the overall
-							appearance, as well as the showing and hiding via
-							CSS transitions. You can modify any of this with
-							custom CSS or overriding our default variables. It's
-							also worth noting that just about any HTML can go
-							within the <code>.accordion-body</code>, though the
-							transition does limit overflow.
+			</div>
+		</section>
+		<!-- End Carousel  -->
+		<!-- Start Categories -->
+		<section class="categories">
+			<div class="container py-5">
+				<div>
+					<h4 class="text-purple-dark fw-bold display-4 my-5 pb-2">Top categories & technologies</h4>
+					<h6 class="text-purple-dark display-6 fw-light mb-3">Web development / Front-End /
+						Back-End / Full Stack</h6>
+					<p class="fs-4 mb-5">Choose from the hottest industry requirements</p>
+				</div>
+				<div class="row g-5 row-cols-1 row-cols-lg-2 justify-content-around">
+					<!-- Start Item 1 -->
+					<div>
+						<div class="card border-0 display-2 mx-auto" data-bs-toggle="popover" data-bs-trigger="hover"
+							title="Web development" data-bs-content="Front-End Frameworks">
+							<div class="card-body p-0 row">
+								<i class="fa-brands fa-angular text-angular col-6 center-flex" data-bs-toggle="tooltip"
+									data-bs-placement="top" title="Angular"></i>
+								<i class="fa-brands fa-vuejs text-vue col-6 center-flex" data-bs-toggle="tooltip" title="VueJs"></i>
+								<i class="fa-brands fa-react text-react center-flex" data-bs-toggle="tooltip" title="ReactJs"></i>
+							</div>
+						</div>
+					</div>
+					<!-- End Item 1 -->
+					<!-- Start Item 2 -->
+					<div>
+						<div class="card display-2 mx-auto" data-bs-toggle="popover" data-bs-trigger=" hover"
+							title="Frontend languages" data-bs-content="HTML, CSS, JavaScript, Sass/Scss, CSS-Framework">
+							<div class="card-body p-0 row">
+								<i class="fa-brands fa-html5 text-html center-flex col-4" data-bs-toggle="tooltip" title="HTML5"></i>
+								<i class="fa-brands fa-css3-alt text-css center-flex col-4" data-bs-toggle="tooltip" title="Css3"></i>
+								<i class="fa-brands fa-js text-js center-flex col-4" data-bs-toggle="tooltip" title="Js"></i>
+								<i class="fa-brands fa-sass text-sass center-flex col-4 offset-2" data-bs-toggle="tooltip"
+									title="Sass"></i>
+								<i class="fa-brands fa-bootstrap text-bs center-flex col-4" data-bs-toggle="tooltip"
+									title="Bootstrap"></i>
+							</div>
+						</div>
+					</div>
+					<!-- End Item 2 -->
+					<!-- Start Item 3 -->
+					<div>
+						<div class="card display-2 mx-auto" data-bs-toggle="popover" data-bs-trigger=" hover"
+							title="Backend languages & technologies" data-bs-content="npm, NodeJS, Express, MongoDB, Sql">
+							<div class="card-body p-0 row ">
+								<i class="fa-brands fa-npm text-npm center-flex col-6" data-bs-toggle="tooltip" title="Npm"></i>
+								<i class="fa-brands fa-node text-nodeJS center-flex col-6" data-bs-toggle="tooltip" title="NodeJS"></i>
+								<i class="fas fa-database text-mongoDB center-flex" data-bs-toggle="tooltip" title="MongoDB"></i>
+							</div>
+						</div>
+					</div>
+					<!-- End Item 3. -->
+					<!-- Start Item 4 -->
+					<div>
+						<div class="card display-4 mx-auto" data-bs-toggle="popover" data-bs-trigger=" hover" title="Fullstack"
+							data-bs-content="MongoDB - document database 
+              Express(.js) - Node.js web framework
+              React(.js) - a client-side JavaScript framework 
+              Node(.js) - the premier JavaScript web server">
+							<div class="card-body  p-0 row">
+								<div class="col">
+									<h4 class="center-flex">MERN</h4>
+									<div class="row">
+										<i class="fas fa-database text-mongoDB col-6 center-flex" data-bs-toggle="tooltip"
+											title="MongoDB"></i>
+										<div class="fs-6 col-6 text-primary center-flex">ExpressJS</div>
+										<i class="fab fa-react text-react col-6 center-flex" data-bs-toggle="tooltip" title="ReactJs"></i><i
+											class="fab fa-node text-nodeJS col-6 center-flex" data-bs-toggle="tooltip" title="NodeJS"></i>
+									</div>
+								</div>
+								<div class="col">
+									<h4 class="center-flex">MEAN</h4>
+									<div class="row">
+										<i class="fas fa-database text-mongoDB col-6 center-flex" data-bs-toggle="tooltip"
+											title="MongoDB"></i>
+										<div class="fs-6 col-6 text-primary center-flex">ExpressJS</div>
+										<i class="fab fa-angular text-angular col-6 center-flex" data-bs-toggle="tooltip"
+											title="Angular"></i>
+										<i class="fab fa-node text-nodeJS col-6 center-flex*" data-bs-toggle="tooltip" title="NodeJS"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Item 4 -->
+				</div>
+			</div>
+		</section>
+		<!-- End Categories -->
+		<!-- Start  Products -->
+		<section class="products py-5" id="product-gallery">
+			<div class="container px-md-0">
+				<div>
+					<h4 class="text-purple-dark fw-bold display-4 my-5 pb-2">Course</h4>
+					<h6 class="text-purple-dark display-6 fw-light mb-3">Web development / Frameworks / JavaScript / Design</h6>
+					<p class="fs-4 mb-5">Choose from over 100,000 online video courses with new additions published every month
+					</p>
+				</div>
+				<div class="row g-5">
+					<!-- Start Product Item 1 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/Web Dev HTML CSS JS SASS.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">Web Development HTML CSS & JS Beginner to Advance</h4>
+							<p class="card-text text-muted">Web development/Front-End</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">4.8</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(2152)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$15.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-warning text-purple-dark">Bestseller</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct1" role="button"
+							aria-controls="offcanvasProduct1">
+						</a>
+					</div>
+					<!-- End Product Item 1 -->
+					<!-- Start Offcanvas Product 1 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct1" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct1" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct1">
+								Web Development HTML CSS & JS Beginner to Advance
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-warning text-dark">Bestseller</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct1">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct1" aria-expanded="false"
+											aria-controls="collapseOneProduct1">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct1" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct1">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct1">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct1" aria-expanded="true" aria-controls="collapseTwoProduct1">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct1" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct1">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct1">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct1" aria-expanded="false"
+											aria-controls="collapseThreeProduct1">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct1" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct1">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct1">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct1" aria-expanded="false"
+											aria-controls="collapseFourProduct1">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct1" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct1">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 1 -->
+					<!-- Start Product Item 2 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/Modern JavaScript and NodeJS Course.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">Modern JavaScript and NodeJS</h4>
+							<p class="card-text text-muted">Web development/Fullstack</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">4.8</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(1501)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$25.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-success">New</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct2" role="button"
+							aria-controls="offcanvasProduct2">
+						</a>
+					</div>
+					<!-- End Product Item 2 -->
+					<!-- Start Offcanvas Product 2 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct2" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct2" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct2">
+								Modern JavaScript and NodeJS
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-success">New</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct2">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct2" aria-expanded="false"
+											aria-controls="collapseOneProduct2">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct2" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct2">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct2">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct2" aria-expanded="true" aria-controls="collapseTwoProduct2">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct2" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct2">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct2">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct2" aria-expanded="false"
+											aria-controls="collapseThreeProduct2">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct2" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct2">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct2">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct2" aria-expanded="false"
+											aria-controls="collapseFourProduct2">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct2" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct2">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 2 -->
+					<!-- Start Product Item 3 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/UI UX Desing Course.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">UI & UX using Figma Beginner to Advance</h4>
+							<p class="card-text text-muted">Design</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">4.8</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(1120)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$25.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-success">New</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct3" role="button"
+							aria-controls="offcanvasProduct3">
+						</a>
+					</div>
+					<!-- End Product Item 3 -->
+					<!-- Start Offcanvas Product 3 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct3" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct3" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct3">
+								UI & UX using Figma Beginner to Advance
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-success">New</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct3">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct3" aria-expanded="false"
+											aria-controls="collapseOneProduct3">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct3" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct3">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct3">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct3" aria-expanded="true" aria-controls="collapseTwoProduct3">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct3" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct3">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct3">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct3" aria-expanded="false"
+											aria-controls="collapseThreeProduct3">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct3" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct3">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct3">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct3" aria-expanded="false"
+											aria-controls="collapseFourProduct3">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct3" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct3">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 3 -->
+					<!-- Start Product Item 4 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/Visual Studio Code Course.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">Master Visual Studio Code</h4>
+							<p class="card-text text-muted">Web Developement</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">2.5</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(500)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$10.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-success">New</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct4" role="button"
+							aria-controls="offcanvasProduct4">
+						</a>
+					</div>
+					<!-- End Product Item 4 -->
+					<!-- Start Offcanvas Product 4 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct4" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct4" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct4">
+								Master Visual Studio Code
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-success">New</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct4">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct4" aria-expanded="false"
+											aria-controls="collapseOneProduct4">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct4" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct4">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct4">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct4" aria-expanded="true" aria-controls="collapseTwoProduct4">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct4" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct4">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct4">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct4" aria-expanded="false"
+											aria-controls="collapseThreeProduct4">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct4" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct4">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct4">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct4" aria-expanded="false"
+											aria-controls="collapseFourProduct4">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct4" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct4">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 4 -->
+					<!-- Start Product Item 5 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/Bootstrap 5 Logo.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">Bootstrap 5</h4>
+							<p class="card-text text-muted">Web Developement</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">4.8</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(1450)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$15.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-danger">Hot & New</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct5" role="button"
+							aria-controls="offcanvasProduct5">
+						</a>
+					</div>
+					<!-- End Product Item 5 -->
+					<!-- Start Offcanvas Product 5 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct5" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct5" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct5">
+								Bootstrap 5
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-danger">Hot & New</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct5">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct5" aria-expanded="false"
+											aria-controls="collapseOneProduct5">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct5" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct5">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct5">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct5" aria-expanded="true" aria-controls="collapseTwoProduct5">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct5" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct5">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct5">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct5" aria-expanded="false"
+											aria-controls="collapseThreeProduct5">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct5" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct5">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct5">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct5" aria-expanded="false"
+											aria-controls="collapseFourProduct5">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct5" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct5">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 5 -->
+					<!-- Start Product Item 6 -->
+					<div class="card border-0 col-md-6 col-lg-4">
+						<img src="imgs/30 Day of Projects Logo-V3.jpg" class="card-img-top img-fluid" alt="Image_item_01">
+						<div class="card-body px-0">
+							<h4 class="card-title fw-bold">30 HTML5 CSS3 & JavaScript Projects</h4>
+							<p class="card-text text-muted">Web Developement</p>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="text-carrot-red fs-5 me-2">4.8</strong>
+								<span class="text-review-cold fs-6">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half-stroke"></i>
+								</span>
+								<span class="text-muted ms-2 fs-6">(1458)</span>
+							</span>
+							<span class="d-flex align-items-center mb-2">
+								<strong class="fs-5">$15.99</strong><del class="ms-2 text-muted">99.99</del>
+							</span>
+							<span class="badge bg-success">New</span>
+						</div>
+						<a class="stretched-link" data-bs-toggle="offcanvas" href="#offcanvasProduct6" role="button"
+							aria-controls="offcanvasProduct6">
+						</a>
+					</div>
+					<!-- End Product Item 6 -->
+					<!-- Start Offcanvas Product 6 -->
+					<div class="offcanvas offcanvas-end shadow" tabindex="-1" id="offcanvasProduct6" data-bs-scroll="true"
+						aria-labelledby="offcanvasExampleLabelProduct6" data-bs-backdrop="false">
+						<div class="offcanvas-header">
+							<h4 class="offcanvas-title fw-bold w-75" id="offcanvasExampleLabelProduct6">
+								30 HTML5 CSS3 & JavaScript Projects
+							</h4>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="badge bg-success">New</span>
+								<span class="text-success">Updated<strong>Jully 2021</strong></span>
+							</div>
+							<div class="text-muted d-flex align-items-center justify-content-between mt-2">
+								<span>25 total hours</span>
+								<span>All levels</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-between my-3">
+								<button class="btn btn-danger btn-lg w-100">Add To Cart</button>
+								<i class="fa-solid fa-cart-plus text-danger ms-3 fs-1 p-1 center-flex icon-cart"></i>
+							</div>
+							<h5 class="fw-bold">What you`ll learn:</h5>
+							<ul class="list-unstyled lh-lg text-muted m-3">
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									HTML5 Boilerplate, Semantic Layout and essential
+									Tags
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									CSS3 Variables, Transitions, Dropdowns, Overlays
+									& More
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									Flexbox & CSS Grid Projects
+								</li>
+								<li><i class="fa-solid fa-check text-success me-2"></i>
+									JavaScript basics, DOM manipulation, ES6
+								</li>
+							</ul>
+							<h5 class="fw-bold">Course content</h5>
+							<p class="text-muted">18 sections • 132 lectures • 25h 0m total length</p>
+
+							<!-- Start Accordion -->
+							<div class="accordion mx-md-3">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOneProduct6">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOneProduct6" aria-expanded="false"
+											aria-controls="collapseOneProduct6">
+											<strong>Introduction</strong>
+											<span class="badge bg-primary">2 lectures - 12:50min</span>
+										</button>
+									</h2>
+									<div id="collapseOneProduct6" class="accordion-collapse collapse"
+										aria-labelledby="headingOneProduct6">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col col-md-7">Introduction</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center  flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Setting up the environment</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">07:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwoProduct6">
+										<button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapseTwoProduct6" aria-expanded="true" aria-controls="collapseTwoProduct6">
+											<strong>Html 5</strong>
+											<span class="badge bg-primary">8 lectures - 1h</span>
+										</button>
+									</h2>
+									<div id="collapseTwoProduct6" class="accordion-collapse collapse show"
+										aria-labelledby="headingTwoProduct6">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is HTML 5?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML 5 Boilerplate</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">HTML Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThreeProduct6">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThreeProduct6" aria-expanded="false"
+											aria-controls="collapseThreeProduct6">
+											<strong>Css 3</strong>
+											<span class="badge bg-primary">12 lectures - 1h 34min</span>
+										</button>
+									</h2>
+									<div id="collapseThreeProduct6" class="accordion-collapse collapse"
+										aria-labelledby="headingThreeProduct6">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Syntaxe</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css elements</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Headings</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Paragraph</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Anchor</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Lists</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFourProduct6">
+										<button class="accordion-button justify-content-between collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFourProduct6" aria-expanded="false"
+											aria-controls="collapseFourProduct6">
+											<strong>Css 3 Flexbox</strong>
+											<span class="badge bg-primary">12 lectures - 2h 24min</span>
+										</button>
+									</h2>
+									<div id="collapseFourProduct6" class="accordion-collapse collapse"
+										aria-labelledby="headingFourProduct6">
+										<div class="accordion-body">
+											<ul class="list-unstyled lh-lg mb-0">
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-success"></i>
+													<a href="#" class="col-11 col-md-7 ">Section overview</a>
+													<span class="col-md-2 text-decoration-underline text-primary d-none d-md-block">Preview</span>
+													<span class="col-md-2 text-muted d-none d-md-flex justify-content-end">05:20</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">What is Css 3 Flexbox?</a>
+													<span class="col-md-2 text-muted d-none d-md-flex  justify-content-end">04:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css 3 Flexbox </a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">02:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">15:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">03:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">05:16</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">09:30</span>
+												</li>
+												<li class="row align-items-center flex-nowrap">
+													<i class="col-1 fa-solid fa-circle-play text-danger"></i>
+													<a href="#" class="col-11 col-md-9">Css Flexbox</a>
+													<span class="col-md-2 text-muted d-none d-md-flex   justify-content-end">12:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Accordion -->
+						</div>
+					</div>
+					<!-- End Offcanvas Product 6 -->
+
+				</div>
+			</div>
+		</section>
+		<!-- End Products -->
+		<!-- Start Reviews -->
+		<section class="reviews bg-light">
+			<div class="container py-5">
+				<div>
+					<h4 class="text-purple-dark fw-bold display-4 my-5 pb-2">Customer reviews</h4>
+					<h6 class="text-purple-dark display-6 fw-light mb-5">Your opinion counts!</h6>
+				</div>
+				<div class="row g-5">
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-1.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-2.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-3.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-4.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-5.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex me-3">
+								<img src="imgs/testimonials-6.jpg" alt="testimonials-1"
+									class="img-fluid rounded-circle border border-5 border-secondary">
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Jane Dow</span>
+								<span class="text-muted">Dec 02.2015</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex spinner-border me-3" role="status">
+								<span class="visually-hidden">Loading...</span>
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Loading...</span>
+								<span class="text-muted">Loading...</span>
+							</div>
+						</div>
+					</div>
+					<div class="card col-md-6 col-lg-4 col-xl-3 border-0 bg-light">
+						<div class="card-body bg-white shadow rounded-2">
+							<h5 class="card-title text-review-cold">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex quos voluptate
+								similique consequuntur aperiam voluptas et reprehenderit, nihil vero? Necessitatibus quisquam
+								perspiciatis aliquid quia! Fugiat totam necessitatibus aperiam modi?</p>
+						</div>
+						<div class="row g-0 mt-3">
+							<div class="image center-flex spinner-border me-3" role="status">
+								<span class="visually-hidden">Loading...</span>
+							</div>
+							<div class="col d-flex flex-column align-items-start align-items-md-center justify-content-center">
+								<span class="fw-bold">Loading...</span>
+								<span class="text-muted">Loading...</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<i class="fa-solid fa-address-book fa-lg text-danger"></i>
+		</section>
+		<!-- End Reviews -->
+		<!-- Start Collaborate  -->
+		<section class="collaborate">
+			<div class="container py-5">
+				<div>
+					<h4 class="text-purple-dark fw-bold display-4 my-5 pb-2">Collaborate with us</h4>
+					<h6 class="text-purple-dark display-6 fw-light mb-3">Teach / Affiliate / Coupons / Design</h6>
+					<p class="fs-4 mb-5">With more then 3 Mil students around the world thi is the strongest course platform !</p>
+				</div>
+			</div>
+			<!-- Start Instructor  -->
+			<div class="instructor">
+				<div class="container py-5">
+					<div class="row g-5">
+						<div class="image col-lg-6 col-xl-4">
+							<img src="imgs/collaborate_01.jpg" alt="image_collaborate_01" class="img-fluid">
+						</div>
+						<div class="description col-lg-6 col-xl-7 offset-xl-1 text-center text-md-start">
+							<h4 class="text-purple-dark  display-2 fw-bold">Become an instructor</h4>
+							<p class="text-muted">
+								With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet
+								consectetur adipisicing elit. Voluptate quasi quis ipsa voluptatum soluta debitis distinctio, quas animi
+								qui minus. Quisquam earum aliquid a excepturi mollitia fugiat similique fugit iste?
+							</p>
+							<a href="#" class="btn btn-purple w-100">Become an affiliate</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Instructor  -->
+		</section>
+		<!-- End Collaborate  -->
+		<!-- Start Social Media -->
+		<section class="social-media bg-light">
+			<div class="container py-5">
+				<div class="d-flex justify-content-between display-5">
+					<a href="#" class="text-purple-dark">
+						<i class="fa-brands fa-instagram instagram"></i>
+					</a>
+					<a href="#" class="text-purple-dark">
+						<i class="fa-brands fa-youtube youtube"></i>
+					</a>
+					<a href="#" class="text-purple-dark">
+						<i class="fa-brands fa-facebook facebook"></i>
+					</a>
+					<a href="#" class="text-purple-dark">
+						<i class="fa-brands fa-twitter twitter"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- End Social Media -->
+		<!-- Start Affiliate -->
+		<section class="affiliate">
+			<div class="container py-5">
+				<div class="row g-5">
+					<div class="image col-lg-6 col-xl-4">
+						<img src="imgs/collaborate_02.jpg" alt="image_collaborate_02" class="img-fluid">
+					</div>
+					<div class="description col-lg-6 col-xl-7 offset-xl-1 text-center text-md-start my-lg-auto">
+						<h4 class="text-purple-dark  display-2 fw-bold">Become an affiliate</h4>
+						<p class="text-muted">
+							Our affiliate program supporting text below as a natural lead-in to additional
+							content. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam praesentium libero itaque
+							veniam sint tenetur.
+						</p>
+						<a href="#" class="btn btn-purple w-100">Become an affiliate</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Affiliate -->
+	</main>
+	<!-- End Main Section  -->
+	<!-- Start Footer -->
+	<footer>
+		<!-- Start Contact  -->
+		<div class="contact bg-purple-dark-20">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<h3 class="text-white ">Web Development Courses</h3>
+						<ul class="list-unstyled lh-lg">
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">HTML5 & CSS3</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">JavaScript</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Sass / Scss</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Tailwind CSS</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Bootstrap</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Node.JS</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">TypeScript</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">React</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Angular</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Vue JS</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">WordPress</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<h3 class="text-white ">Account & Paymont info</h3>
+						<ul class="list-unstyled lh-lg">
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Your account</a></li>
+							<li>
+								<a href="#" class="text-white-50 hover-link text-decoration-none">
+									Forgot your password / change password
+								</a>
+							</li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Delete account</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Refunds</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Taxes & fees</a></li>
+						</ul>
+						<h3 class="text-white ">About us</h3>
+						<ul class="list-unstyled lh-lg">
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">About the company</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Our team</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">Careers</a></li>
+							<li><a href="#" class="text-white-50 hover-link text-decoration-none">News</a></li>
+						</ul>
+					</div>
+					<div, class="col-md-6 col-lg-4">
+						<h3 class="text-white ">Stay informed</h3>
+						<form>
+							<div class="input-group">
+								<input type="email" class="form-control" placeholder="Your email" aria-label="Recipient's username"
+									aria-describedby="button-addon">
+								<i class="fa-regular fa-envelope icon fs-5"></i>
+								<button class="btn btn-danger" type="submit" id="button-addon">Submit</button>
+							</div>
+						</form>
+						<p class="text-white-50 my-3">
+							*Subscribe to our newsletter to receive early discount offers, updates and new
+							products info
+						</p>
+					</div,>
+				</div>
+			</div>
 		</div>
-		<!-- Font Awesome Js  -->
-		<script src="js/all.min.js"></script>
-		<!-- Bootstrap Js -->
-		<script src="js/bootstrap.bundle.min.js"></script>
-	</body>
+		<!-- End  Contact  -->
+
+		<!-- Start Resume Services -->
+		<div class="resume-services bg-purple-dark ">
+			<div class="container py-5 border-bottom border-secondary">
+				<div class="row">
+					<div class="col-sm-6 col-lg-3 mb-4">
+						<div class="d-flex">
+							<div class="col-1 me-3 center-flex">
+								<i class="fa-solid fa-truck text-carrot-red fs-3 "></i>
+							</div>
+							<div class="col">
+								<h6 class="text-white fs-6 mb-1">Fast and free delivery</h6>
+								<p class="text-white-50 mb-0">Get instant access to you course!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-3 mb-4">
+						<div class="d-flex">
+							<div class="col-1 me-3 center-flex">
+								<i class="fa-solid fa-dollar-sign text-carrot-red fs-3 "></i>
+							</div>
+							<div class="col">
+								<h6 class="text-white fs-6 mb-1">Fast and free delivery</h6>
+								<p class="text-white-50 mb-0">Get instant access to you course!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-3 mb-4">
+						<div class="d-flex ">
+							<div class="col-1 me-3 center-flex">
+								<i class="fa-solid fa-headset text-carrot-red fs-3 "></i>
+							</div>
+							<div class="col">
+								<h6 class="text-white fs-6 mb-1">Fast and free delivery</h6>
+								<p class="text-white-50 mb-0">Get instant access to you course!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-3 mb-4">
+						<div class="d-flex">
+							<div class="col-1 me-3 center-flex">
+								<i class="fa-solid fa-credit-card text-carrot-red fs-3"></i>
+							</div>
+							<div class="col">
+								<h6 class="text-white fs-6 mb-1">Fast and free delivery</h6>
+								<p class="text-white-50 mb-0">Get instant access to you course!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Resume Services -->
+		<!-- Start Logo & Social Media & Copyright  -->
+		<section class="logo-social-copyright bg-purple-dark">
+			<div class="container py-5">
+				<div class="row align-items-center">
+					<div class="col-auto logo  me-5 mb-4">
+						<img src="imgs/ecommerce.png" alt="logo">
+					</div>
+					<div class="language col-auto">
+						<div class="btn-group dropdown">
+							<button class="btn btn-sm dropdown-toggle px-2 text-light border border-white rounded"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fa-solid fa-flag me-2"></i> Eng / $
+							</button>
+							<ul class="dropdown-menu my-1 custome-z-index start-0">
+								<li class="dropdown-item">
+									<select class="form-select form-select-sm">
+										<option value="usd">$ USD</option>
+										<option value="eur">€ EUR</option>
+										<option value="ukp">£ UKP</option>
+										<option value="jpy">¥ JPY</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="social col-12 col-md d-flex align-items-center justify-content-center justify-content-md-end">
+						<ul class="list-unstyled d-flex gap-3 mb-0">
+							<li><a href="#"><i class="fa-brands fa-twitter twitter fs-4 text-white p-2"></i></a></li>
+							<li><a href="#"><i class="fa-brands fa-facebook facebook fs-4 text-white p-2 "></i></a></li>
+							<li><a href="#"><i class="fa-brands fa-instagram instagram fs-4 text-white p-2"></i></a></li>
+							<li><a href="#"><i class="fa-brands fa-youtube youtube fs-4 text-white p-2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="copyright text-center text-white-50 pb-4 w-75 mx-auto">
+				&#169; All rights reserved. Created by
+				<a href="#" class="text-light">MenyhartMedia</a>
+			</p>
+		</section>
+		<!-- Start Logo & Social Media & Copyright  -->
+	</footer>
+	<!-- End Footer -->
+	<!-- Bootstrap Js -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+			return new bootstrap.Popover(popoverTriggerEl)
+		})
+	</script>
+</body>
+
 </html>

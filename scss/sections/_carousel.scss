@@ -1,0 +1,27 @@
+/*  Carousel Section */
+.carousel-landing {
+  @include media-breakpoint-up(xxl) {
+    .carousel-item {
+      height: calc(100vh - calc(68.7594px + 55.9811px));
+    }
+  }
+
+  .fade-in-left {
+    animation: fadeInLeftBig 3s ease;
+  }
+}
+
+
+@include keyframes(fadeInLeftBig) {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

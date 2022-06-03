@@ -1,0 +1,37 @@
+// Text
+@include gen-props('text', 'color');
+// Background-color
+@include gen-props('bg', 'background');
+
+// Hover
+.hover {
+  transition: 0.3s ease;
+  color: white !important;
+
+  &-link {
+
+    &:hover,
+    &:focus {
+      @extend .hover;
+      text-decoration: underline !important;
+    }
+  }
+}
+
+// Class For Centring Using Flexbox
+.center-flex {
+  @include center-flex;
+}
+
+.btn {
+  &-purple {
+    @extend .btn;
+    background-color: $purple-dark;
+    color: $light;
+
+    &:hover {
+      @extend .btn-danger;
+      @extend .shadow;
+    }
+  }
+}

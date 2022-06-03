@@ -1,0 +1,53 @@
+footer {
+  .contact {
+    .input-group {
+      position: relative;
+    }
+
+    input[type="email"] {
+      padding-left: 40px;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 0.25rem 1rem;
+      z-index: 3;
+    }
+  }
+
+  .logo-social-copyright {
+    .logo {
+      img {
+        width: 100px;
+      }
+    }
+
+    .btn {
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $light;
+        color: $purple-dark !important;
+      }
+    }
+
+    .social {
+
+      @each $media,
+      $color in $color-media {
+        .#{$media} {
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: $light;
+            color: $color !important;
+          }
+        }
+      }
+    }
+
+  }
+}
